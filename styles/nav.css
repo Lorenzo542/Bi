@@ -1,0 +1,15 @@
+.nav {
+    background-color: #143C8A;
+    height: 70vh;
+    width: 10vw;
+    position: fixed;
+    left: 0;
+    top: 15%;
+    bottom: 15%;
+    border-radius: 2vh;
+    margin-left: -9vw;
+    transition: all 0.3s;
+}
+.nav:hover {
+    margin-left: -4vw;
+}

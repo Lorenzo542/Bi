@@ -1,15 +1,24 @@
 .nav {
     background-color: #143C8A;
     height: 70vh;
-    width: 10vw;
+    width: 5vw;
     position: fixed;
     left: 0;
     top: 15%;
     bottom: 15%;
-    border-radius: 2vh;
-    margin-left: -9vw;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-left: -4vw;
     transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .nav:hover {
-    margin-left: -4vw;
+    margin-left: -0.5vw;
+}
+
+nav > a > img {
+    height: 4vh
 }

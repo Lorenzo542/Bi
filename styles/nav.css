@@ -22,3 +22,10 @@
 nav > a > img {
     height: 4vh
 }
+
+nav a.active {
+    background-color: #0C2B6C;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 5px;
+}

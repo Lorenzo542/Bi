@@ -671,148 +671,53 @@ var _clients = require("./Clients");
 var _sales = require("./sales");
 var _receipt = require("./Receipt");
 
-},{"./sales":"96zan","./Clients":"nDqYE","./Receipt":"fU37R"}],"96zan":[function(require,module,exports,__globalThis) {
+},{"./Clients":"nDqYE","./sales":"96zan","./Receipt":"fU37R"}],"nDqYE":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "data", ()=>data);
+parcelHelpers.export(exports, "CLIENTS", ()=>CLIENTS);
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
-const data = [
-    {
-        date: "2025-03-01",
-        amount: 5163
-    },
-    {
-        date: "2025-03-02",
-        amount: 3778
-    },
-    {
-        date: "2025-03-03",
-        amount: 3929
-    },
-    {
-        date: "2025-03-04",
-        amount: 6771
-    },
-    {
-        date: "2025-03-05",
-        amount: 2469
-    },
-    {
-        date: "2025-03-06",
-        amount: 6995
-    },
-    {
-        date: "2025-03-07",
-        amount: 2758
-    },
-    {
-        date: "2025-03-08",
-        amount: 6134
-    },
-    {
-        date: "2025-03-09",
-        amount: 4892
-    },
-    {
-        date: "2025-03-10",
-        amount: 4641
-    },
-    {
-        date: "2025-03-11",
-        amount: 2080
-    },
-    {
-        date: "2025-03-12",
-        amount: 7895
-    },
-    {
-        date: "2025-03-13",
-        amount: 3980
-    },
-    {
-        date: "2025-03-14",
-        amount: 15211
-    },
-    {
-        date: "2025-03-15",
-        amount: 5402
-    },
-    {
-        date: "2025-03-16",
-        amount: 2639
-    },
-    {
-        date: "2025-03-17",
-        amount: 2018
-    },
-    {
-        date: "2025-03-18",
-        amount: 3351
-    },
-    {
-        date: "2025-03-19",
-        amount: 4677
-    },
-    {
-        date: "2025-03-20",
-        amount: 2556
-    },
-    {
-        date: "2025-03-21",
-        amount: 6768
-    },
-    {
-        date: "2025-03-22",
-        amount: 6988
-    },
-    {
-        date: "2025-03-23",
-        amount: 2522
-    },
-    {
-        date: "2025-03-24",
-        amount: 7769
-    },
-    {
-        date: "2025-03-25",
-        amount: 7645
-    },
-    {
-        date: "2025-03-26",
-        amount: 3281
-    },
-    {
-        date: "2025-03-27",
-        amount: 5336
-    },
-    {
-        date: "2025-03-28",
-        amount: 7819
-    },
-    {
-        date: "2025-03-29",
-        amount: 4752
-    },
-    {
-        date: "2025-03-30",
-        amount: 4109
-    },
-    {
-        date: "2025-03-31",
-        amount: 1941
-    }
+var _date = require("./date");
+const CLIENTS = [
+    72,
+    85,
+    63,
+    98,
+    110,
+    93,
+    78,
+    121,
+    145,
+    135,
+    89,
+    97,
+    105,
+    113,
+    138,
+    126,
+    92,
+    74,
+    69,
+    82,
+    94,
+    108,
+    116,
+    129,
+    143,
+    132,
+    115,
+    104,
+    97,
+    86,
+    122
 ];
 (async function() {
-    new (0, _autoDefault.default)(document.getElementById('Sales'), {
-        type: 'line',
+    new (0, _autoDefault.default)(document.getElementById('Clients'), {
+        type: 'bar',
         options: {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-                y: {
-                    max: Math.round(Math.max(...data.map((row)=>row.amount)) * 1.15 / 1000) * 1000
-                },
                 x: {
                     ticks: {
                         display: false
@@ -820,35 +725,31 @@ const data = [
                     grid: {
                         display: false
                     }
-                },
-                y: {
-                    grid: {
-                        color: 'rgba(0,0,0,0.05)'
-                    }
                 }
             },
             plugins: {
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    position: 'average'
                 }
             }
         },
         data: {
-            labels: data.map((row)=>row.date),
+            labels: (0, _date.DATE),
             datasets: [
                 {
-                    label: 'Sales by day',
-                    data: data.map((row)=>row.amount),
-                    borderColor: '#143C8A',
-                    hoverBorderColor: 'purple',
-                    tension: 0.4
+                    label: 'Clients',
+                    data: CLIENTS,
+                    hoverBackgroundColor: '#143C8A'
                 }
             ]
         }
     });
 })();
 
-},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"a3bOj":[function(require,module,exports,__globalThis) {
+},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./date":"doz8V"}],"a3bOj":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _chartJs = require("../dist/chart.js");
@@ -14366,145 +14267,93 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"nDqYE":[function(require,module,exports,__globalThis) {
+},{}],"doz8V":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "data", ()=>data);
+parcelHelpers.export(exports, "DATE", ()=>DATE);
+const DATE = [
+    "2025-03-01",
+    "2025-03-02",
+    "2025-03-03",
+    "2025-03-04",
+    "2025-03-05",
+    "2025-03-06",
+    "2025-03-07",
+    "2025-03-08",
+    "2025-03-09",
+    "2025-03-10",
+    "2025-03-11",
+    "2025-03-12",
+    "2025-03-13",
+    "2025-03-14",
+    "2025-03-15",
+    "2025-03-16",
+    "2025-03-17",
+    "2025-03-18",
+    "2025-03-19",
+    "2025-03-20",
+    "2025-03-21",
+    "2025-03-22",
+    "2025-03-23",
+    "2025-03-24",
+    "2025-03-25",
+    "2025-03-26",
+    "2025-03-27",
+    "2025-03-28",
+    "2025-03-29",
+    "2025-03-30",
+    "2025-03-31"
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"96zan":[function(require,module,exports,__globalThis) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SALES", ()=>SALES);
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
-const data = [
-    {
-        day: "2025-03-01",
-        count: 72
-    },
-    {
-        day: "2025-03-02",
-        count: 85
-    },
-    {
-        day: "2025-03-03",
-        count: 63
-    },
-    {
-        day: "2025-03-04",
-        count: 98
-    },
-    {
-        day: "2025-03-05",
-        count: 110
-    },
-    {
-        day: "2025-03-06",
-        count: 93
-    },
-    {
-        day: "2025-03-07",
-        count: 78
-    },
-    {
-        day: "2025-03-08",
-        count: 121
-    },
-    {
-        day: "2025-03-09",
-        count: 145
-    },
-    {
-        day: "2025-03-10",
-        count: 135
-    },
-    {
-        day: "2025-03-11",
-        count: 89
-    },
-    {
-        day: "2025-03-12",
-        count: 97
-    },
-    {
-        day: "2025-03-13",
-        count: 105
-    },
-    {
-        day: "2025-03-14",
-        count: 113
-    },
-    {
-        day: "2025-03-15",
-        count: 138
-    },
-    {
-        day: "2025-03-16",
-        count: 126
-    },
-    {
-        day: "2025-03-17",
-        count: 92
-    },
-    {
-        day: "2025-03-18",
-        count: 74
-    },
-    {
-        day: "2025-03-19",
-        count: 69
-    },
-    {
-        day: "2025-03-20",
-        count: 82
-    },
-    {
-        day: "2025-03-21",
-        count: 94
-    },
-    {
-        day: "2025-03-22",
-        count: 108
-    },
-    {
-        day: "2025-03-23",
-        count: 116
-    },
-    {
-        day: "2025-03-24",
-        count: 129
-    },
-    {
-        day: "2025-03-25",
-        count: 143
-    },
-    {
-        day: "2025-03-26",
-        count: 132
-    },
-    {
-        day: "2025-03-27",
-        count: 115
-    },
-    {
-        day: "2025-03-28",
-        count: 104
-    },
-    {
-        day: "2025-03-29",
-        count: 97
-    },
-    {
-        day: "2025-03-30",
-        count: 86
-    },
-    {
-        day: "2025-03-31",
-        count: 122
-    }
+var _date = require("./date");
+const SALES = [
+    3124,
+    4782,
+    3568,
+    4217,
+    3893,
+    4651,
+    3419,
+    4976,
+    3742,
+    8534,
+    4102,
+    3687,
+    4523,
+    3298,
+    4912,
+    3856,
+    4372,
+    7236,
+    3614,
+    4759,
+    3489,
+    4193,
+    3925,
+    4648,
+    8621,
+    3271,
+    4530,
+    3814,
+    6543,
+    4087
 ];
 (async function() {
-    new (0, _autoDefault.default)(document.getElementById('Clients'), {
-        type: 'bar',
+    new (0, _autoDefault.default)(document.getElementById('Sales'), {
+        type: 'line',
         options: {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
+                y: {
+                    max: Math.round(Math.max(...SALES) * 1.15 / 1000) * 1000
+                },
                 x: {
                     ticks: {
                         display: false
@@ -14512,161 +14361,72 @@ const data = [
                     grid: {
                         display: false
                     }
+                },
+                y: {
+                    grid: {
+                        color: 'rgba(0,0,0,0.05)'
+                    }
                 }
             },
             plugins: {
                 legend: {
                     display: false
-                },
-                tooltip: {
-                    position: 'average'
                 }
             }
         },
         data: {
-            labels: data.map((row)=>row.day),
+            labels: (0, _date.DATE),
             datasets: [
                 {
-                    label: 'Clients',
-                    data: data.map((row)=>row.count),
-                    hoverBackgroundColor: '#143C8A'
+                    label: 'Sales by day',
+                    data: SALES,
+                    borderColor: '#143C8A',
+                    hoverBorderColor: 'purple',
+                    tension: 0.4
                 }
             ]
         }
     });
 })();
 
-},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fU37R":[function(require,module,exports,__globalThis) {
+},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./date":"doz8V"}],"fU37R":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "data", ()=>data);
+parcelHelpers.export(exports, "RECEIPT", ()=>RECEIPT);
 var _auto = require("chart.js/auto");
 var _autoDefault = parcelHelpers.interopDefault(_auto);
-const data = [
-    {
-        date: "2025-03-01",
-        Receipt: 52
-    },
-    {
-        date: "2025-03-02",
-        Receipt: 68
-    },
-    {
-        date: "2025-03-03",
-        Receipt: 45
-    },
-    {
-        date: "2025-03-04",
-        Receipt: 61
-    },
-    {
-        date: "2025-03-05",
-        Receipt: 55
-    },
-    {
-        date: "2025-03-06",
-        Receipt: 34
-    },
-    {
-        date: "2025-03-07",
-        Receipt: 49
-    },
-    {
-        date: "2025-03-08",
-        Receipt: 65
-    },
-    {
-        date: "2025-03-09",
-        Receipt: 58
-    },
-    {
-        date: "2025-03-10",
-        Receipt: 62
-    },
-    {
-        date: "2025-03-11",
-        Receipt: 33
-    },
-    {
-        date: "2025-03-12",
-        Receipt: 46
-    },
-    {
-        date: "2025-03-13",
-        Receipt: 67
-    },
-    {
-        date: "2025-03-14",
-        Receipt: 54
-    },
-    {
-        date: "2025-03-15",
-        Receipt: 60
-    },
-    {
-        date: "2025-03-16",
-        Receipt: 70
-    },
-    {
-        date: "2025-03-17",
-        Receipt: 44
-    },
-    {
-        date: "2025-03-18",
-        Receipt: 39
-    },
-    {
-        date: "2025-03-19",
-        Receipt: 41
-    },
-    {
-        date: "2025-03-20",
-        Receipt: 57
-    },
-    {
-        date: "2025-03-21",
-        Receipt: 63
-    },
-    {
-        date: "2025-03-22",
-        Receipt: 38
-    },
-    {
-        date: "2025-03-23",
-        Receipt: 66
-    },
-    {
-        date: "2025-03-24",
-        Receipt: 50
-    },
-    {
-        date: "2025-03-25",
-        Receipt: 59
-    },
-    {
-        date: "2025-03-26",
-        Receipt: 43
-    },
-    {
-        date: "2025-03-27",
-        Receipt: 35
-    },
-    {
-        date: "2025-03-28",
-        Receipt: 64
-    },
-    {
-        date: "2025-03-29",
-        Receipt: 37
-    },
-    {
-        date: "2025-03-30",
-        Receipt: 47
-    },
-    {
-        date: "2025-03-31",
-        Receipt: 53
-    }
+var _date = require("./date");
+const RECEIPT = [
+    43,
+    57,
+    52,
+    48,
+    59,
+    41,
+    55,
+    46,
+    60,
+    49,
+    54,
+    42,
+    58,
+    45,
+    51,
+    47,
+    56,
+    53,
+    44,
+    50,
+    59,
+    46,
+    52,
+    58,
+    40,
+    55,
+    49,
+    57,
+    43,
+    54
 ];
 (async function() {
     new (0, _autoDefault.default)(document.getElementById('Receipt'), {
@@ -14676,17 +14436,17 @@ const data = [
             maintainAspectRatio: false
         },
         data: {
-            labels: data.map((row)=>row.date),
+            labels: (0, _date.DATE),
             datasets: [
                 {
                     label: 'Receipt',
-                    data: data.map((row)=>row.Receipt)
+                    data: RECEIPT
                 }
             ]
         }
     });
 })();
 
-},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["gzRay","7AF0o"], "7AF0o", "parcelRequire30ab", {})
+},{"chart.js/auto":"a3bOj","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./date":"doz8V"}]},["gzRay","7AF0o"], "7AF0o", "parcelRequire30ab", {})
 
 //# sourceMappingURL=Bi.bbf72a7b.js.map

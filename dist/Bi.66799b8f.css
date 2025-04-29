@@ -63,7 +63,7 @@ main .graph-4 {
 
 @media (width <= 768px) {
   main .container {
-    height: auto;
+    height: 400vh;
     min-height: 90vh;
   }
 
